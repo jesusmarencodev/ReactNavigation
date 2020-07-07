@@ -1,0 +1,38 @@
+import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+
+const Inicio = ({navigation}) => {
+
+    const informacion = {
+        clienteID :50000,
+        totalPagar : 500
+    }
+
+
+
+
+    const visitarNosotros = () => {
+        navigation.navigate('Nosotros', informacion)
+    }
+
+
+    return (
+        <View style={styles.contenedor}>
+            <Text>Inicio</Text>
+            <Button
+                title="Ir a Nosotros"
+                onPress={()=> visitarNosotros()}
+            />
+        </View>
+    )
+}
+
+export default Inicio
+
+const styles = StyleSheet.create({
+    contenedor : {
+        flex : 1,
+        alignItems : 'center',
+        justifyContent : 'center'
+    }
+})
